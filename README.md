@@ -19,8 +19,6 @@ Un portfolio personal moderno y ligero construido con React, Vite y Tailwind CSS
 
 ## Comandos rápidos
 
-```bash
-# instalar dependencias
 npm install
 
 # desarrollo (hot-reload)
@@ -28,19 +26,9 @@ npm run dev
 
 # construir para producción
 npm run build
-
 # previsualizar build
 npm run preview
 ```
-
-## Estructura importante
-
-- `src/` — Componentes, hooks, datos y estilos
-- `public/` — Archivos estáticos
-- `serverless_examples/` — Ejemplos de funciones serverless (Netlify)
-- `__tests__/` — Tests
-
----
 
 ## Notas de desarrollo
 
@@ -52,10 +40,6 @@ npm run preview
 1. Crea una rama: `git checkout -b feature/mi-cambio`
 2. Haz cambios y prueba localmente
 3. Abre un Pull Request describiendo el cambio
-
----
-
-## Licencia
 
 MIT — contacta si quieres otra licencia.
 
