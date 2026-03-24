@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './common/Button';
 
 function splitTextIntoLines(text = '', maxChars = 80) {
   const words = String(text).split(' ');
@@ -196,8 +197,8 @@ export default function DownloadButton({ data }) {
   };
 
   return (
-    <button onClick={handleDownload} className="flex items-center gap-2 px-5 py-3 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all text-slate-600">
+    <Button onClick={handleDownload} variant="secondary" className="flex items-center gap-2">
       {loading ? 'Generando...' : 'Descargar CV'}
-    </button>
+    </Button>
   );
 }

@@ -1,6 +1,6 @@
 export const skills = {
-  frontend: ['React 18', 'Inertia.js', 'TypeScript', 'JSX', 'Tailwind CSS', 'Bootstrap', 'JavaScript'],
-  backend: ['PHP 8', 'Laravel 11', 'REST APIs', 'MySQL', 'PostgreSQL', 'Redis'],
+  frontend: ['React', 'Inertia.js', 'TypeScript', 'JSX', 'Tailwind CSS', 'Bootstrap', 'JavaScript'],
+  backend: ['PHP', 'Laravel', 'REST APIs', 'MySQL', 'PostgreSQL', 'Redis'],
   tools: ['Docker', 'AWS S3', 'Git', 'GitHub', 'CI/CD Pipelines', 'PHPUnit', 'Websockets (Pusher)', 'Queue Management (Laravel Queue)']
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Nav from './components/Nav.tsx';
 import Hero from './components/Hero.tsx';
+import InteractiveHeroBackground from './components/InteractiveHeroBackground';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Education from './components/Education';
@@ -9,7 +10,7 @@ import Footer from './components/Footer';
 import { skills, experience, education } from './data/siteData';
 
 const App = () => (
-  <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans selection:bg-blue-100 selection:text-blue-900">
+  <div className="min-h-screen text-slate-800 font-sans selection:bg-blue-100 selection:text-blue-900">
     <Helmet>
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
@@ -19,9 +20,11 @@ const App = () => (
         "url": "https://tuweb.com"
       })}</script>
     </Helmet>
+    <InteractiveHeroBackground />
+
     <Nav />
 
-    <main className="pt-24 pb-20">
+    <main className="pt-12 md:pt-24 pb-20">
       <Hero />
       <Experience data={experience} />
       <Skills data={skills} />
