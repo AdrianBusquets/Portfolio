@@ -1,40 +1,61 @@
-# React + Vite
+# Portfolio Adrian
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un portfolio personal moderno y ligero construido con React, Vite y Tailwind CSS. Muestra proyectos, experiencia y habilidades con un diseño limpio y microinteracciones.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Demo**
 
-## React Compiler
+- Ejecuta localmente para ver el proyecto en modo desarrollo.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Tecnologías destacadas**
 
-## Expanding the ESLint configuration
+- React + Vite
+- Tailwind CSS
+- Lottie (animaciones)
+- `pdf-lib` (generación de CV en cliente)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
-## CV PDF / Serverless setup
-
-
-This project includes a client-side PDF generator using `pdf-lib` (lightweight, compatible with Vite) and examples of serverless endpoints to: 1) increment a download counter and 2) validate `token` query params.
-
-Quick setup:
-
-1. Install runtime dependencies:
+## Comandos rápidos
 
 ```bash
-npm install pdf-lib react-helmet-async
+# instalar dependencias
+npm install
+
+# desarrollo (hot-reload)
+npm run dev
+
+# construir para producción
+npm run build
+
+# previsualizar build
+npm run preview
 ```
 
-2. Environment variables (create a `.env` file, don't commit it):
+## Estructura importante
 
-- `VITE_DOWNLOAD_COUNTER_URL` — URL of your serverless function that increments download counts.
-- `VITE_TOKEN_VALIDATION_URL` — URL of serverless function that validates tokens and returns extra CV data.
+- `src/` — Componentes, hooks, datos y estilos
+- `public/` — Archivos estáticos
+- `serverless_examples/` — Ejemplos de funciones serverless (Netlify)
+- `__tests__/` — Tests
 
-3. Serverless examples are in `serverless_examples/netlify/` — adapt for Netlify, Vercel or Supabase Edge Functions. The functions should use a service role key to access the DB (keep it secret).
+---
 
-4. Usage: the PDF generator is created on-demand when the user clicks "Descargar CV". Token validation runs on page load and, if valid, can inject extra data into the generated CV.
+## Notas de desarrollo
 
-Security: never commit service role keys or `.env` files. Use provider secrets in your hosting platform.
+- El proyecto incluye un generador de PDF para el CV (`pdf-lib`).
+- Guarda credenciales y URLs sensibles en `.env` y nunca las subas al repositorio.
+
+## Contribuir
+
+1. Crea una rama: `git checkout -b feature/mi-cambio`
+2. Haz cambios y prueba localmente
+3. Abre un Pull Request describiendo el cambio
+
+---
+
+## Licencia
+
+MIT — contacta si quieres otra licencia.
+
