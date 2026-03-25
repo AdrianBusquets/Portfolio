@@ -29,7 +29,7 @@ const App = () => (
 
     <Nav />
 
-    <main className="pt-12 md:pt-24 pb-20">
+    <main className="pt-8 md:pt-24 pb-20">
       <Hero />
       <Experience data={experience} />
       <Skills data={skills} />
