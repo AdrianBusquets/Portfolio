@@ -1,45 +1,28 @@
-# Portfolio Adrian
+# Portfolio de Adrián Busquets
 
-Un portfolio personal moderno y ligero construido con React, Vite y Tailwind CSS. Muestra proyectos, experiencia y habilidades con un diseño limpio y microinteracciones.
+Portfolio personal hecho con React 18, TypeScript, Vite y Motion.
 
----
+## Ponerlo en marcha
 
-**Demo**
-
-- Ejecuta localmente para ver el proyecto en modo desarrollo.
-
-**Tecnologías destacadas**
-
-- React + Vite
-- Tailwind CSS
-- Lottie (animaciones)
-- `pdf-lib` (generación de CV en cliente)
-
----
-
-## Comandos rápidos
-
+```bash
 npm install
-
-# desarrollo (hot-reload)
-npm run dev
-
-# construir para producción
-npm run build
-# previsualizar build
-npm run preview
+npm run dev      # desarrollo en http://localhost:5173
+npm run build    # genera la carpeta dist/ lista para desplegar
 ```
 
-## Notas de desarrollo
+## Cambiar el contenido
 
-- El proyecto incluye un generador de PDF para el CV (`pdf-lib`).
-- Guarda credenciales y URLs sensibles en `.env` y nunca las subas al repositorio.
+Todo el texto está en `src/data.ts`: perfil, proyectos, experiencia, stack, formación e idiomas.
 
-## Contribuir
+- **Capturas de los proyectos:** guarda la imagen en `public/capturas/` y añade
+  `image: "capturas/jostelpro.webp"` al proyecto en `src/data.ts`.
+- **CV en PDF:** sustituye `public/cv-adrian-busquets.pdf` por la versión nueva cuando lo actualices.
+- **Ticket:** las líneas del ticket están en `src/components/TicketPrinter.tsx`.
+- **Comandos de la terminal:** en `src/components/HeroTerminal.tsx`.
 
-1. Crea una rama: `git checkout -b feature/mi-cambio`
-2. Haz cambios y prueba localmente
-3. Abre un Pull Request describiendo el cambio
+## Desplegar
 
-MIT — contacta si quieres otra licencia.
+En Vercel o Netlify: importa el repositorio, comando de build `npm run build` y carpeta de salida `dist`.
 
+Cuando tengas el dominio definitivo, añade en `index.html` las etiquetas `og:url` y `og:image`
+(una captura de 1200×630 en `public/`) para que el enlace se vea bien al compartirlo.
